@@ -1,0 +1,25 @@
+默认情况下使用eclipse打开当前文件所在文件夹很麻烦，需要右键点击 Package Explorer 中的节点选择属性，然后复制路径，再打开资源管理器，然后再把路径粘贴进去。而MyEclipse一直有一个很好用的工具在工具栏上，只要选中 Package Explorer 的节点，一点击这个图标就可以在资源管理器中打开文件了。
+
+MyEclipse 里面的插件名叫：Desktop toolbar。
+
+于是我就在 Eclipse 的工具栏配置中寻找这个插件，可是没有找到，经过在网上查阅资料后，终于找到了一个模拟这个插件的办法，配置和操作起来也比较简单，在这里分享给大家。
+
+依次展开如下菜单：
+
+    Run ---- External Tools ---- External Tools Configurations
+
+1.在 program 下面新建一个工具；
+
+2.在 Location 中填写 windows 资源管理器路径；
+
+3.在 Arguments 中填写 ${container_loc}；(不带分号)
+
+4.选择 Common 选项卡；
+
+5.选中 External Tools 复选框(使该项出现在工具栏中)；
+
+6.点击 Apply 按钮。
+
+
+好了，单击工具栏上的 External Tools 按钮即可在资源管理器中打开你在 Package Explorer 中选中的文件所在的目录了。
+
